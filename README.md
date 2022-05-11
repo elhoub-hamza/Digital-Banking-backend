@@ -8,5 +8,7 @@
 
 ![3](https://user-images.githubusercontent.com/12114256/167930701-4927ee1a-5e23-4bd3-b9e6-9a77dffb1491.PNG)
 
+##  Partie 2 Table per Class
+
 
 
