@@ -10,5 +10,14 @@
 
 ##  Partie 2 Table per Class
 
+![1](https://user-images.githubusercontent.com/12114256/167931641-1b7b5b3b-1683-4cc5-97ba-234d84cd888a.PNG)
+
+![2](https://user-images.githubusercontent.com/12114256/167931653-262816c4-df91-4298-b488-da3afceaa060.PNG)
+
+![3](https://user-images.githubusercontent.com/12114256/167931632-a0a43cc4-83c5-4791-bc7a-3b442a426aed.PNG)
+
+![4](https://user-images.githubusercontent.com/12114256/167931627-8663efeb-04b9-45c6-8b9b-3ea7a38a457e.PNG)
+
+
 
 
