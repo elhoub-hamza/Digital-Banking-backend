@@ -2,8 +2,11 @@
 
 ## Partie 1 Single Table 
 
-![1](https://user-images.githubusercontent.com/12114256/167928830-95d1e5be-fe88-4dd3-ae96-c3dce0cc93f3.PNG)
+![1](https://user-images.githubusercontent.com/12114256/167930684-db53b797-3d86-4bd3-81fd-16aacba0c65a.PNG)
 
-![2](https://user-images.githubusercontent.com/12114256/167928844-6a7772bd-99e2-4b90-84fd-cdebf19f8506.PNG)
+![2](https://user-images.githubusercontent.com/12114256/167930698-e44594a1-9778-49a6-8f2f-2df31612bc8e.PNG)
+
+![3](https://user-images.githubusercontent.com/12114256/167930701-4927ee1a-5e23-4bd3-b9e6-9a77dffb1491.PNG)
+
 
 
