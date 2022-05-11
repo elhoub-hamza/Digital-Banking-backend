@@ -1,10 +1,8 @@
 package com.example.digitalbankingbackend;
 
-import com.example.digitalbankingbackend.entities.BankAccount;
-import com.example.digitalbankingbackend.entities.CurrentAccount;
-import com.example.digitalbankingbackend.entities.Customer;
-import com.example.digitalbankingbackend.entities.SavingAccount;
+import com.example.digitalbankingbackend.entities.*;
 import com.example.digitalbankingbackend.enumes.AccountStatus;
+import com.example.digitalbankingbackend.enumes.OperationType;
 import com.example.digitalbankingbackend.repositories.AccountOperationRepository;
 import com.example.digitalbankingbackend.repositories.BankAccountRepository;
 import com.example.digitalbankingbackend.repositories.CustomerRepository;
@@ -54,6 +52,16 @@ public class DigitalBankingBackendApplication {
                 savingAccount.setCustomer(cust);
                 savingAccount.setInterestRate(5.5);
                 bankAccountRepository.save(savingAccount);
+            });
+            bankAccountRepository.findAll().forEach(acc->{
+                for (int i=0;i<5;i++){
+                    AccountOperation accountOperation=new AccountOperation();
+                    accountOperation.setOperationDate(new Date());
+                    accountOperation.setAmount(Math.random()*12000);
+                    accountOperation.setType(Math.random()>0.5? OperationType.DEBIT:OperationType.CREDIT);
+                    accountOperation.setBankAccount(acc);
+                    accountOperationRepository.save(accountOperation);
+                }
             });
         };
     }
