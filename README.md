@@ -20,6 +20,8 @@
 
 ![1](https://user-images.githubusercontent.com/12114256/168471143-914609bc-4fb6-4d13-8c43-b8d0892151c1.PNG)
 
+## Partie 3 joined table 
+
 
 
 
