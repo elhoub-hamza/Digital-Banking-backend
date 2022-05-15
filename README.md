@@ -22,6 +22,9 @@
 
 ## Partie 3 joined table 
 
+![1](https://user-images.githubusercontent.com/12114256/168471289-d0431fd3-d42a-4e52-92cc-4e8461c31b69.PNG)
+
+![2](https://user-images.githubusercontent.com/12114256/168471292-3e642314-f05f-47a4-8539-5e345b763fe9.PNG)
 
 
 
