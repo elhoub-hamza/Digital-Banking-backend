@@ -18,6 +18,15 @@
 
 ![4](https://user-images.githubusercontent.com/12114256/167931627-8663efeb-04b9-45c6-8b9b-3ea7a38a457e.PNG)
 
+![1](https://user-images.githubusercontent.com/12114256/168471143-914609bc-4fb6-4d13-8c43-b8d0892151c1.PNG)
 
+## Partie 3 joined table 
 
+![1](https://user-images.githubusercontent.com/12114256/168471289-d0431fd3-d42a-4e52-92cc-4e8461c31b69.PNG)
+
+![2](https://user-images.githubusercontent.com/12114256/168471292-3e642314-f05f-47a4-8539-5e345b763fe9.PNG)
+
+![3](https://user-images.githubusercontent.com/12114256/168471452-ef9a29ec-4c9d-4a95-ac2e-2c5712a67fa1.PNG)
+
+![4](https://user-images.githubusercontent.com/12114256/168471456-4de18f28-608e-49c6-b36f-6f2fc9c59b20.PNG)
 
