@@ -10,8 +10,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import java.util.Currency;
 import java.util.Date;
 import java.util.UUID;
 import java.util.stream.Stream;
@@ -28,7 +26,7 @@ public class DigitalBankingBackendApplication {
                             BankAccountRepository bankAccountRepository,
                             AccountOperationRepository accountOperationRepository) {
         return args -> {
-            Stream.of("Hassan","Yaaine","Aicha").forEach(name->{
+            Stream.of("Hassan","Yasine","Aicha").forEach(name->{
                 Customer customer=new Customer();
                 customer.setName(name);
                 customer.setEmail(name+"@gmail.com");
@@ -61,6 +59,26 @@ public class DigitalBankingBackendApplication {
                     accountOperation.setType(Math.random()>0.5? OperationType.DEBIT:OperationType.CREDIT);
                     accountOperation.setBankAccount(acc);
                     accountOperationRepository.save(accountOperation);
+                }
+
+                BankAccount bankAccount=
+                        bankAccountRepository.findById("").orElse(null);
+                if(bankAccount!=null){
+                System.out.println("*****************************");
+                System.out.println(bankAccount.getId());
+                System.out.println(bankAccount.getBalance());
+                System.out.println(bankAccount.getStatus());
+                System.out.println(bankAccount.getCreatedAt());
+                System.out.println(bankAccount.getCustomer().getName());
+                System.out.println(bankAccount.getClass().getSimpleName());
+                if(bankAccount instanceof CurrentAccount){
+                    System.out.println("Rate =>"+((CurrentAccount)bankAccount).getOverDaft());
+                }else if (bankAccount instanceof SavingAccount){
+                    System.out.println("Rate =>"+((SavingAccount)bankAccount).getInterestRate());
+                }
+                bankAccount.getAccountOperationList().forEach(op->{
+                    System.out.println(op.getType()+"\t"+op.getOperationDate()+"\t"+op.getAmount());
+                });
                 }
             });
         };
