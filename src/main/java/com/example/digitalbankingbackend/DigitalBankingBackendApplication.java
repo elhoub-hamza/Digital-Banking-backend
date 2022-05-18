@@ -6,10 +6,13 @@ import com.example.digitalbankingbackend.enumes.OperationType;
 import com.example.digitalbankingbackend.repositories.AccountOperationRepository;
 import com.example.digitalbankingbackend.repositories.BankAccountRepository;
 import com.example.digitalbankingbackend.repositories.CustomerRepository;
+import com.example.digitalbankingbackend.services.BankService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.Date;
 import java.util.UUID;
 import java.util.stream.Stream;
@@ -22,6 +25,12 @@ public class DigitalBankingBackendApplication {
         SpringApplication.run(DigitalBankingBackendApplication.class, args);
     }
     @Bean
+    CommandLineRunner commandLineRunner(BankService bankService){
+        return args -> {
+            bankService.consulter();
+        };
+    }
+    //@Bean
     CommandLineRunner start(CustomerRepository customerRepository,
                             BankAccountRepository bankAccountRepository,
                             AccountOperationRepository accountOperationRepository) {
@@ -61,26 +70,8 @@ public class DigitalBankingBackendApplication {
                     accountOperationRepository.save(accountOperation);
                 }
 
-                BankAccount bankAccount=
-                        bankAccountRepository.findById("").orElse(null);
-                if(bankAccount!=null){
-                System.out.println("*****************************");
-                System.out.println(bankAccount.getId());
-                System.out.println(bankAccount.getBalance());
-                System.out.println(bankAccount.getStatus());
-                System.out.println(bankAccount.getCreatedAt());
-                System.out.println(bankAccount.getCustomer().getName());
-                System.out.println(bankAccount.getClass().getSimpleName());
-                if(bankAccount instanceof CurrentAccount){
-                    System.out.println("Rate =>"+((CurrentAccount)bankAccount).getOverDaft());
-                }else if (bankAccount instanceof SavingAccount){
-                    System.out.println("Rate =>"+((SavingAccount)bankAccount).getInterestRate());
-                }
-                bankAccount.getAccountOperationList().forEach(op->{
-                    System.out.println(op.getType()+"\t"+op.getOperationDate()+"\t"+op.getAmount());
-                });
-                }
             });
+
         };
     }
 }
